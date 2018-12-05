@@ -1,0 +1,7 @@
+.*.swp
+*.bak
+vendor
+Dockerfile
+.git
+.gitignore
+*.sh

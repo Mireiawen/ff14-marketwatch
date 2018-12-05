@@ -1,0 +1,6 @@
+				{foreach $data -> Prices as $p}<tr class="{$p -> Classes}">
+					<td><img src="https://xivapi.com{$data -> Item -> Icon}" alt="{$data -> Item -> Name}"> {$data -> Item -> Name} {if ($p -> IsHQ)}HQ{/if}</td>
+					<td>{$p -> Quantity}× {$p -> PricePerUnit} = {$p -> PriceTotal}</td>
+					<td class="retainer"><img src="https://xivapi.com{$p -> Town -> Icon}" alt="{$p -> Town -> Name}" placeholder="{$p -> Town -> Name}"> {$p -> RetainerName}</td>
+					<td class="crafter">{if ($p -> IsCrafted)}{$p -> CraftSignature}{/if}</td>
+				</tr>{foreachelse}<tr><td colspan="4">No items listed</td></tr>{/foreach}

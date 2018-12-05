@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Market Watch</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+	<link rel="stylesheet" href="css/ffxiv.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootbox.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="u:Index">
+				Market Watcher
+			</a>
+		</div>
+		
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+<div class="col-md-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h1 class="panel-title">Market Settings</h1>
+		</div>
+		
+		<div class="panel-body">
+			<form class="form-horizontal">
+				<fieldset>
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="server">Server name</label>  
+						<div class="col-md-4">
+							<input id="server" name="server" type="text" class="form-control input-md" required="yes" value="{$server}">
+							<span class="help-block">Name of the server to search from</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="idlist">Item list</label>  
+						<div class="col-md-4">
+							<input id="idlist" name="idlist" type="text" placeholder="1,2,3" class="form-control input-md" required="yes" value="{$idlist}">
+							<span class="help-block">Comma separated list of the item IDs</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="crafterlist">Crafter list</label>  
+						<div class="col-md-4">
+							<input id="idlist" name="crafterlist" type="text" placeholder="Character 1, Character 2" class="form-control input-md" value="{$crafterlist}">
+							<span class="help-block">Comma separated list of the item crafter names</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="retainerlist">Retainer list</label>  
+						<div class="col-md-4">
+							<input id="idlist" name="retainerlist" type="text" placeholder="Retainer 1, Retainer 2" class="form-control input-md" value="{$retainerlist}">
+							<span class="help-block">Comma separated list of the retainers to check</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="itemnum">Number of items</label>  
+						<div class="col-md-4">
+							<input id="idlist" name="itemnum" type="text" class="form-control input-md" value="{$itemnum}">
+							<span class="help-block">Number of items to show</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="submit"></label>
+						<div class="col-md-4">
+							<button id="submit" name="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h1 class="panel-title">Market Watch List</h1>
+		</div>
+		
+		<div class="panel-body">
+			<table class="table">
+				<tr><th>Item</th><th>Price</th><th>Retainer</th><th>Crafter</th></tr>

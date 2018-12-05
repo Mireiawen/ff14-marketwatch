@@ -1,0 +1,6 @@
+{
+    "require": {
+        "xivapi/xivapi-php": "^1.2",
+        "smarty/smarty": "^3.1"
+    }
+}

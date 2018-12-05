@@ -1,0 +1,27 @@
+*, *:before, *:after
+{
+	box-sizing: border-box !important;
+}
+
+body
+{
+	background-image: url('images/bg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
+}
+
+.panel
+{
+	opacity: 0.85;
+}
+
+.crafter-mismatch td.crafter
+{
+	background-color: rgba(255, 0, 0, 0.80);
+}
+
+.retainer-mismatch td.retainer
+{
+	background-color: rgba(255, 0, 0, 0.80);
+}
