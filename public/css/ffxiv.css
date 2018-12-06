@@ -16,6 +16,16 @@ body
 	opacity: 0.85;
 }
 
+td
+{
+	padding: 2px !important;
+	vertical-align: middle !important;
+}
+
+td img
+{
+}
+
 .item-first td
 {
 	border-top-width: 3px !important;
