@@ -16,6 +16,11 @@ body
 	opacity: 0.85;
 }
 
+.item-first td
+{
+	border-top-width: 3px !important;
+}
+
 .crafter-mismatch td.crafter
 {
 	background-color: rgba(255, 0, 0, 0.80);

@@ -99,9 +99,17 @@ foreach ($items as $item)
 	}
 	
 	// Go through the price data and add some display classes
+	$first = TRUE;
 	foreach ($res -> Prices as &$price)
 	{
 		$classes = array();
+		
+		if ($first)
+		{
+			$classes[] = 'item-first';
+			$first = FALSE;
+		}
+		
 		if ((count($crafters)) && ($price -> IsCrafted) && (!in_array($price -> CraftSignature, $crafters)))
 		{
 			$classes[] = 'crafter-mismatch';
