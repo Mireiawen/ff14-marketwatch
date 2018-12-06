@@ -89,8 +89,14 @@ foreach ($items as $item)
 		throw new \Exception(sprintf(_('Invalid item ID %s'), $item));
 	}
 	
+	// Get the item data
+	$item = $api -> content -> item() -> one($item_id);
+	$category_id = $item -> ItemSearchCategoryTargetID;
+	sleep(1);
+	
 	// Get the market data via the API
 	$res = $api -> market -> price($server, $item_id);
+	$res -> Item -> Category = $category_id;
 	
 	// Limit the item prices if need to
 	if ($itemnum)
